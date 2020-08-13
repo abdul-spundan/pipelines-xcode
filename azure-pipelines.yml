@@ -22,6 +22,11 @@ steps:
 #     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
 #     packageApp: true
 
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
 - task: Xcode@5
   inputs:
     actions: 'build'

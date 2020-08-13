@@ -9,18 +9,18 @@ pool:
 variables:
   scheme: ''
   sdk: 'iphoneos'
-  configuration: 'Release'
+  # configuration: 'Debug'
 
 
 steps:
-- task: Xcode@5
-  inputs:
-    sdk: '$(sdk)'
-    scheme: '$(scheme)'
-    configuration: '$(configuration)'
-    xcodeVersion: 'default' # Options: default, 10, 9, 8, specifyPath
-    exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
-    packageApp: false
+# - task: Xcode@5
+#   inputs:
+#     sdk: '$(sdk)'
+#     scheme: '$(scheme)'
+#     configuration: '$(configuration)'
+#     xcodeVersion: 'default' # Options: default, 10, 9, 8, specifyPath
+#     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
+#     packageApp: true
 
 - task: Xcode@5
   inputs:
